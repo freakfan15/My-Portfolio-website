@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Work.scss";
 
@@ -41,6 +41,9 @@ const Work = () => {
 			<h2 className='head-text'>
 				Here are <span>My Projects</span>
 			</h2>
+			<p className='head__para' style={{ marginTop: 10 }}>
+				Hover on the project for links.
+			</p>
 
 			<div className='app__work-filter'>
 				{["HTML/CSS", "MERN", "React JS", "Django", "Data Science", "All"].map(
@@ -117,4 +120,4 @@ const Work = () => {
 	);
 };
 
-export default AppWrap(Work, "app__works");
+export default AppWrap(MotionWrap(Work, 'app__works') , "work", "app__primarybg");

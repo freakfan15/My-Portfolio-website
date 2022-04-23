@@ -3,6 +3,17 @@
     width: 100%;
     flex-direction: column;
   }
+
+  .head__para{
+    font-size: 1.5rem;
+    text-align: left;
+    color: var(--gray-color);
+    line-height: 1.5;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.75rem;
+    }
+  }
   
   .app__work-filter {
     display: flex;
@@ -11,7 +22,7 @@
     align-items: center;
     flex-wrap: wrap;
   
-    margin: 4rem 0 2rem;
+    margin: 2rem 0 2rem;
   
     &-item {
       padding: 0.5rem 1rem;
