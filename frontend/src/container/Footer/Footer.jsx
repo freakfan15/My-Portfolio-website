@@ -48,7 +48,7 @@ const Footer = () => {
 				<div className='app__footer-card '>
 					<img src={images.email} alt='email' />
 					<a href='mailto:vivekkrrai.bxr@gmail.com' className='p-text'>
-          vivekkrrai.bxr@gmail.com
+						vivekkrrai.bxr@gmail.com
 					</a>
 				</div>
 				<div className='app__footer-card'>
@@ -102,4 +102,8 @@ const Footer = () => {
 	);
 };
 
-export default AppWrap(Footer, "contact");
+export default AppWrap(
+	MotionWrap(Footer, "app__footer"),
+	"contact",
+	"app__whitebg"
+);
